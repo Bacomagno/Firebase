@@ -4,6 +4,6 @@
 export interface IUser {
     name: string;
     position: number;
-    Identificate: number;
+    identificate: number;
     symbol: string;
 }
