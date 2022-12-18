@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { ListUsersComponent } from './components/list-users/list-users.component';
-import { CreateUsersComponent } from './components/create-users/create-users.component';
-import { MaterialModule } from 'src/app/material/material.module';
 import { UsersRoutingModule } from './users-routing.module';
+import { MaterialModule } from 'src/app/material/material.module';
+
+import { UsersComponent } from './users.component';
+import { CreateUsersComponent } from './create-users/create-users.component';
 
 @NgModule({
   declarations: [
-    CreateUsersComponent,
-    ListUsersComponent
+    UsersComponent,
+    CreateUsersComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     UsersRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
-  exports:[
-    MaterialModule
-  ]
+  exports:[]
 })
 export class UsersModule { }
