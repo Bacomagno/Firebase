@@ -9,15 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: 'device',
-        loadChildren: () =>import('../device/device.module').then((module) => module.DeviceModule)
+        loadChildren: () =>import('./device/device.module').then((module) => module.DeviceModule)
       },
       {
         path: 'identificationType',
-        loadChildren: () =>import('../identification-type/identification-type.module').then((module) => module.IdentificationTypeModule)
+        loadChildren: () =>import('./identification-type/identification-type.module').then((module) => module.IdentificationTypeModule)
       },
       {
         path: 'users',
-        loadChildren: () =>import('../users/users.module').then((module) => module.UsersModule)
+        loadChildren: () =>import('./users/users.module').then((module) => module.UsersModule)
       },
       { path: '', redirectTo: 'users', pathMatch: 'full' }
     ],
