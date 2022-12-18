@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,19 +6,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './create-identification-type.component.html',
   styleUrls: ['./create-identification-type.component.scss']
 })
-export class CreateIdentificationTypeComponent implements OnInit {
-  addIdType: FormGroup;
+export class CreateIdentificationTypeComponent {
+
+  // https://regexr.com/
+
+  identificationForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-    this.addIdType = this.formBuilder.group({
-      idtype:['',[Validators.required]],
+    this.identificationForm = this.formBuilder.group({
+      idtype: ['', [Validators.required]],
       description: ['', [Validators.required]],
     });
   }
 
-  ngOnInit(): void {}
+  send(): void {
+    console.log('send');
+  }
 
-  send(){
-    console.log('atras')
+  close(): void {
+    console.log('close');
   }
 }

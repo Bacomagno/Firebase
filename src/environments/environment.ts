@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiTest: 'http://apitest',
   firebase: {
     apiKey: 'AIzaSyBfKsvkaxUbCboNhcpN2nh5vfSttrHGfz8',
     authDomain: 'prueba-992c9.firebaseapp.com',
